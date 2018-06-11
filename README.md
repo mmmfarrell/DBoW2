@@ -82,3 +82,24 @@ The `F` parameter is the name of a class that implements the functions defined i
 ### Predefined Vocabularies and Databases
 
 To make it easier to use, DBoW2 defines two kinds of vocabularies and databases: `OrbVocabulary`, `OrbDatabase`, `BriefVocabulary`, `BriefDatabase`. Please, check the demo application to see how they are created and used.
+
+## Use with ORBSLAM2 Vocabulary
+
+This fork has added in support for the vocabulary (ORBvoc) provided by [ORBSLAM2](https://github.com/raulmur/ORB_SLAM2). To build the example provided that tests support of the ORBvoc run the following commands.
+
+```
+git clone https://github.com/mmmfarrell/DBoW2.git
+cd DBoW2/Vocabulary
+tar -xvzf ORBvoc.txt.tar.gz
+cd ..
+mkdir build
+cd build
+cmake ..
+make
+```
+
+The demo programs should build and you can then run the ORBvoc test code with 
+
+```
+./orb_demo
+```
